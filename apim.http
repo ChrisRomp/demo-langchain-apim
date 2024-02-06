@@ -1,0 +1,10 @@
+@apiKey = {{$dotenv AZURE_OPENAI_API_KEY}}
+@apiEndpoint = {{$dotenv AZURE_OPENAI_ENDPOINT}}
+@deploymentId = gpt-35-turbo-0613
+@apiVersion = 2023-05-15
+
+POST {{apiEndpoint}}openai/deployments/{{deploymentId}}/chat/completions?api-version={{apiVersion}}
+Content-Type: application/json
+api-key: {{apiKey}}
+
+{"model":"gpt-35-turbo","messages":[{"role":"user","content":"Hello!"}]}
