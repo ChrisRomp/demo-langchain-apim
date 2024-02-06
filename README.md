@@ -20,3 +20,11 @@ To run this sample, rename `.env.sample` to `.env` and populate the values for:
 - `apim.http`: Calling the chat completions API directly with HTTP
   - Here you can see the `X-MS-Region` response header which indicates the Azure region used by Azure OpenAI.
   - Uses the [VS Code REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension.
+
+## Other Resources
+
+Example of APIM policy to load balance AOAI across multiple regions/deployments: https://gist.github.com/ChrisRomp/f038cc233d99eaf578065723bade2a26
+
+Load Balancing AOAI via APIM: https://github.com/ian-t-adams/azure-openai-api-m-retry -- _This example walks through configuring APIM in Azure as well._
+
+Active/Passive load balancing with APIM: https://techcommunity.microsoft.com/t5/fasttrack-for-azure/smart-load-balancing-for-openai-endpoints-and-azure-api/ba-p/3991616
