@@ -9,7 +9,7 @@ api-key: {{apiKey}}
 
 {
     "model": "gpt-35-turbo",
-    "stream": true,
+    "stream": false,
     "messages": [
         {
             "role":"user",
