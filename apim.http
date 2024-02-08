@@ -7,4 +7,13 @@ POST {{apiEndpoint}}openai/deployments/{{deploymentId}}/chat/completions?api-ver
 Content-Type: application/json
 api-key: {{apiKey}}
 
-{"model":"gpt-35-turbo","messages":[{"role":"user","content":"Hello!"}]}
+{
+    "model": "gpt-35-turbo",
+    "stream": true,
+    "messages": [
+        {
+            "role":"user",
+            "content":"What is the wing speed velocity of an unladen swallow?"
+        }
+    ]
+}
