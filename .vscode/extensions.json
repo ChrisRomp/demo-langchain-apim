@@ -1,6 +1,8 @@
 {
     "recommendations": [
         "humao.rest-client",
-        "ms-python.python"
+        "ms-python.python",
+        "github.copilot",
+        "github.copilot-chat"
     ]
 }
