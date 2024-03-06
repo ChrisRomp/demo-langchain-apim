@@ -25,5 +25,5 @@ with get_openai_callback() as callback:
 
     print(res)
 
-    if model.streaming == False:
+    if model.streaming is False:
         print(f"Callback:\n{callback}\n")
