@@ -1,10 +1,11 @@
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 
+# API Key from AZURE_OPENAI_API_KEY environment variable
+# Endpoint from AZURE_OPENAI_ENDPOINT environment variable
 load_dotenv()
 client = AzureOpenAI(
     api_version="2023-05-15",
-    # azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT"),
 )
 
 completion = client.chat.completions.create(
