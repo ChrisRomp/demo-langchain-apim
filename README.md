@@ -25,9 +25,9 @@ To run this sample, rename `.env.sample` to `.env` and populate the values for:
 > [!IMPORTANT]
 > The `AZURE_OPENAI_ENDPOINT` value should be the URL up to `/openai` but __not__ include the `/openai` part of the URL.
 > 
-> Example: If your API endpoint is something like:  
+> Example: If your API URL is something like: 
 > `https://my-apim.azure-api.net/openai/deployments/...`  
-> ... then your `AZURE_OPENAPI_ENDPOINT` should be:  
+> ... then your `AZURE_OPENAPI_ENDPOINT` should be: 
 > `https://my-apim.azure-api.net`
 
 ### Samples Available
