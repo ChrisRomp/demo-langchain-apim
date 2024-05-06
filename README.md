@@ -24,8 +24,9 @@ To run this sample, rename `.env.sample` to `.env` and populate the values for:
 
 ### Samples Available
 
-- `apim.py`: Calling the chat completions API from LangChain
-- `apim.http`: Calling the chat completions API directly with HTTP
+- [`apim.py`](apim.py): Calling the chat completions API from LangChain
+- [`apim-aoai-sdk.py`](apim-aoai-sdk.py): Calling using the chat completions API with the OpenAI SDK
+- [`apim.http`](apim.http): Calling the chat completions API directly with HTTP
   - Here you can see the `X-MS-Region` response header which indicates the Azure region used by Azure OpenAI.
   - Uses the [VS Code REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension.
 
