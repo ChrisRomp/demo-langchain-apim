@@ -1,6 +1,8 @@
 # demo-langchain-apim
 Demo calling Azure OpenAI with [LangChain](https://python.langchain.com/docs/get_started/introduction) via Azure API Management (APIM).
 
+_Update: Now includes an example using the [OpenAI SDK](https://pypi.org/project/openai/): [`apim-aoai-sdk.py`](apim-aoai-sdk.py)_
+
 ## Azure Environment
 
 Your APIM will need to have Azure OpenAI REST API methods implemented (import OpenAPI spec from [docs](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference)).
