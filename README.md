@@ -9,6 +9,12 @@ Your APIM will need to have Azure OpenAI REST API methods implemented (import Op
 
 On your API, rename the subscription key header paramenter to `api-key`. Create an [APIM subscription](https://learn.microsoft.com/en-us/azure/api-management/api-management-subscriptions) with access to the APIs.
 
+### APIM API Configuration
+
+Note that "Open AI" endpoints are expected to end with `/openai` after the endpoint base URL (`AZURE_OPENAI_ENDPOINT`). When configuring your API in APIM Management, set the `API URL Suffix` to end with `/openai`, either just by setting it to `openai` or `something-else/openai`.
+
+![API Configuration in APIM](media/apim-openai.png)
+
 ## Running the Sample
 
 To run this sample, rename `.env.sample` to `.env` and populate the values for:
@@ -30,3 +36,22 @@ Example of APIM policy to load balance AOAI across multiple regions/deployments:
 Load Balancing AOAI via APIM: https://github.com/ian-t-adams/azure-openai-api-m-retry -- _This example walks through configuring APIM in Azure as well._
 
 Active/Passive load balancing with APIM: https://techcommunity.microsoft.com/t5/fasttrack-for-azure/smart-load-balancing-for-openai-endpoints-and-azure-api/ba-p/3991616
+
+## Troubleshooting
+
+The Python debugger should provide reasonable output to diagnose issues, however you may also wish to enable [diagnostic logging](https://learn.microsoft.com/en-us/azure/api-management/diagnostic-logs-reference) in Azure API Management and configure it to emit Gateway logs to Azure Log Analytics or another option.
+
+In Log Analytics, you can see APIM Gateway log messages including errors for bad requests using a query like:
+
+```kusto
+ApiManagementGatewayLogs
+| order by TimeGenerated desc
+```
+
+Or filter to failed requests with:
+
+```kusto
+ApiManagementGatewayLogs
+| where not(IsRequestSuccess)
+| order by TimeGenerated desc
+```
