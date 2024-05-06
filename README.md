@@ -20,7 +20,15 @@ Note that "Open AI" endpoints are expected to end with `/openai` after the endpo
 To run this sample, rename `.env.sample` to `.env` and populate the values for:
 
 - `AZURE_OPENAI_API_KEY`: Your APIM subscription key
-- `AZURE_OPENAI_ENDPOINT`: The URL to your APIM OpenAI APIs
+- `AZURE_OPENAI_ENDPOINT`: The URL to your APIM OpenAI API
+
+> [!IMPORTANT]
+> The `AZURE_OPENAI_ENDPOINT` value should be the URL up to `/openai` but __not__ include the `/openai` part of the URL.
+> 
+> Example: If your API URL is something like: 
+> `https://my-apim.azure-api.net/openai/deployments/...`  
+> ... then your `AZURE_OPENAPI_ENDPOINT` should be: 
+> `https://my-apim.azure-api.net`
 
 ### Samples Available
 
