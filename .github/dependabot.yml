@@ -10,7 +10,11 @@ updates:
    directory: "/"
    schedule:
      interval: weekly
+   assignees:
+      - "ChrisRomp"
  - package-ecosystem: "pip"
    directory: "/"
    schedule:
      interval: weekly
+   assignees:
+      - "ChrisRomp"
