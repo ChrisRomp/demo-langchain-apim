@@ -9,12 +9,12 @@ updates:
  - package-ecosystem: "devcontainers"
    directory: "/"
    schedule:
-     interval: weekly
+     interval: monthly
    assignees:
       - "ChrisRomp"
  - package-ecosystem: "pip"
    directory: "/"
    schedule:
-     interval: weekly
+     interval: monthly
    assignees:
       - "ChrisRomp"
